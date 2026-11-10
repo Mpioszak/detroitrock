@@ -44,6 +44,11 @@ Things you do not have to do:
 | `tickets` | no | `"https://..."` | Link for the Tickets button. Without it, the button goes to the venue's site. |
 | `notes` | no | `"20th Anniversary Tour"` | One short line: tour name, tribute to whom, and so on. |
 | `endDate` | no | `"2026-11-22"` | Last day of a multi-day event. |
+| `label` | no | `"hidden"` | Keeps the show off the site unless a visitor types the secret phrase into the search box. |
+
+### Hidden local shows
+
+Shows and venues with `"label": "hidden"` do not appear in the list or on the map. They show up only while the search box contains `stairway to heaven`; the regular listings step aside while it does. More words after the phrase search within the hidden shows. The phrase is `SECRET_PHRASE` in `js/app.js`. Anyone who opens `data/shows.json` directly can still read these entries, so this is an Easter egg, not a lock.
 
 Genres in use, so the menu stays tidy: `Rock`, `Classic Rock`, `Hard Rock`, `Metal`, `Punk` (includes hardcore and ska), `Emo/Pop-Punk`, `Indie/Alternative`, `Post-Punk/Goth` (includes industrial), `Blues/Roots`, `Jam`, `Tribute`. A new spelling creates a new menu entry.
 

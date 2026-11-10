@@ -19,7 +19,9 @@ function countBy(items, keyOf) {
 
 function build({ venues, shows, issues, updated }) {
   const past = shows.filter((s) => (s.endDate || s.date) < today);
-  const live = shows.filter((s) => (s.endDate || s.date) >= today && s.date <= windowEnd);
+  const current = shows.filter((s) => (s.endDate || s.date) >= today && s.date <= windowEnd);
+  const live = current.filter((s) => !s.hidden);
+  const secret = current.filter((s) => s.hidden);
   const later = shows.filter((s) => s.date > windowEnd);
   const errors = issues.filter((i) => i.level === 'error');
   const warnings = issues.filter((i) => i.level === 'warning');
@@ -54,6 +56,7 @@ function build({ venues, shows, issues, updated }) {
       { class: 'stats' },
       stat(venues.length, 'venues'),
       stat(live.length, `shows on the site now (next ${WINDOW_MONTHS} months)`),
+      stat(secret.length, 'hidden shows (secret search phrase only)'),
       stat(later.length, 'shows waiting further out'),
       stat(past.length, 'shows already over')
     ),

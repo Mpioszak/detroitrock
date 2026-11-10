@@ -365,6 +365,83 @@
       "lat": 42.29554,
       "lng": -85.07761,
       "website": "https://firekeeperscasino.com/shows/"
+    },
+    {
+      "id": "ziggys",
+      "name": "Ziggy's",
+      "address": "206 W Michigan Ave",
+      "city": "Ypsilanti",
+      "region": "Ann Arbor",
+      "lat": 42.24129,
+      "lng": -83.61496,
+      "website": "https://annarborobserver.com/calendar/category/nightspot/",
+      "label": "hidden"
+    },
+    {
+      "id": "arboretum-saline",
+      "name": "The Arboretum",
+      "address": "984 E Michigan Ave",
+      "city": "Saline",
+      "region": "Ann Arbor",
+      "lat": 42.17685,
+      "lng": -83.75801,
+      "website": "https://annarborobserver.com/calendar/category/nightspot/",
+      "label": "hidden"
+    },
+    {
+      "id": "ann-arbor-funhouse",
+      "name": "Ann Arbor Funhouse",
+      "address": "207 E Washington St",
+      "city": "Ann Arbor",
+      "region": "Ann Arbor",
+      "lat": 42.28055,
+      "lng": -83.74693,
+      "website": "https://annarborobserver.com/calendar/category/nightspot/",
+      "label": "hidden"
+    },
+    {
+      "id": "live-ann-arbor",
+      "name": "Live",
+      "address": "102 S First St",
+      "city": "Ann Arbor",
+      "region": "Ann Arbor",
+      "lat": 42.28118,
+      "lng": -83.75118,
+      "website": "https://annarborobserver.com/calendar/category/nightspot/",
+      "label": "hidden"
+    },
+    {
+      "id": "hear-say-brewing",
+      "name": "Hear.Say Brewing + Theater",
+      "address": "2350 W Liberty St",
+      "city": "Ann Arbor",
+      "region": "Ann Arbor",
+      "lat": 42.2741,
+      "lng": -83.77904,
+      "website": "https://annarborobserver.com/calendar/category/nightspot/",
+      "label": "hidden"
+    },
+    {
+      "id": "papa-petes",
+      "name": "Papa Pete's",
+      "city": "Kalamazoo",
+      "region": "Kalamazoo & Battle Creek",
+      "lat": 42.28737,
+      "lng": -85.58344,
+      "website": "https://lifeinmichigan.com/events/",
+      "label": "hidden"
+    },
+    {
+      "id": "tsdmaac",
+      "name": "TSDMAAC",
+      "address": "15701 James Couzens Fwy",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.40626,
+      "lng": -83.16268,
+      "website": "https://www.songkick.com/metro-areas/18073-us-detroit",
+      "note": "Shows here are ticketed through The Sanctuary Detroit.",
+      "label": "hidden"
     }
   ]
 }

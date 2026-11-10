@@ -173,6 +173,7 @@ export function normalize(venuesRaw, showsRaw) {
       region: text(v.region) || 'Elsewhere in Michigan',
       website,
       note: text(v.note),
+      hidden: text(v.label).toLowerCase() === 'hidden',
     };
     venues.push(venue);
     venueById.set(id, venue);
@@ -250,6 +251,9 @@ export function normalize(venuesRaw, showsRaw) {
       status: text(s.status),
       tickets,
       notes: text(s.notes),
+      // "label": "hidden" keeps a show off the site until the secret phrase
+      // is typed into the search box (see SECRET_PHRASE in js/app.js).
+      hidden: text(s.label).toLowerCase() === 'hidden',
     });
   });
 

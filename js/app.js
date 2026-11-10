@@ -6,6 +6,9 @@ import { h, plural } from './dom.js';
 
 const HOME_REGION = 'Metro Detroit'; // the area the site opens on
 const ALL = ''; // "no filter" value for the selects
+// Shows and venues marked "label": "hidden" in the JSON stay off the site
+// until a visitor types this into the search box (lower case, no accents).
+const SECRET_PHRASE = 'stairway to heaven';
 const MOBILE = window.matchMedia('(max-width: 820px)');
 const CALM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -81,11 +84,16 @@ const inRange = (show, range) => lastDay(show) >= range.from && (!range.to || sh
 
 /* ---------- filtering ---------- */
 
+// Typing the secret phrase swaps the site over to the hidden local shows.
+const unlocked = () => fold(state.q).replace(/\s+/g, ' ').includes(SECRET_PHRASE);
+
 function compute() {
   const range = whenRange(state.when);
-  const words = fold(state.q).split(/\s+/).filter(Boolean);
+  const secret = unlocked();
+  const words = fold(state.q).replace(/\s+/g, ' ').replace(SECRET_PHRASE, ' ').split(/\s+/).filter(Boolean);
   const base = upcoming.filter(
     (s) =>
+      s.hidden === secret &&
       inRange(s, range) &&
       (!state.genre || s.genres.includes(state.genre)) &&
       words.every((w) => s.hay.includes(w))
@@ -93,7 +101,8 @@ function compute() {
   const perVenue = new Map();
   for (const s of base) perVenue.set(s.venue.id, (perVenue.get(s.venue.id) || 0) + 1);
   const listed = base.filter((s) =>
-    state.venueId ? s.venue.id === state.venueId : !state.region || s.venue.region === state.region
+    // The secret list ignores the area filter: it is short and statewide.
+    state.venueId ? s.venue.id === state.venueId : secret || !state.region || s.venue.region === state.region
   );
   return { base, listed, perVenue };
 }
@@ -374,8 +383,16 @@ function armHint() {
 function renderMarkers() {
   if (!cluster) return;
   let changed = false;
+  const secret = unlocked();
   for (const venue of venues) {
     const marker = markers.get(venue.id);
+    // Hidden venues only get a pin while the secret phrase is in the search box.
+    const wanted = !venue.hidden || secret;
+    if (wanted !== cluster.hasLayer(marker)) {
+      if (wanted) cluster.addLayer(marker);
+      else cluster.removeLayer(marker);
+      changed = true;
+    }
     const count = current.perVenue.get(venue.id) || 0;
     const active = venue.id === state.venueId;
     const shown = `${count}|${active}`;
@@ -400,7 +417,7 @@ function fitRegion(region, animate = true) {
     map.once('resize', () => fitRegion(region, false));
     return;
   }
-  const points = venues.filter((v) => !region || v.region === region).map((v) => [v.lat, v.lng]);
+  const points = venues.filter((v) => !v.hidden && (!region || v.region === region)).map((v) => [v.lat, v.lng]);
   if (points.length === 0) return;
   map.closePopup();
   // Padding keeps venues clear of the buttons in the map's corners.
@@ -504,11 +521,11 @@ function buildFilters() {
   for (let m = new Date(today.getFullYear(), today.getMonth(), 1); m <= windowEnd; m = addMonths(m, 1)) {
     when.push([`m:${m.getFullYear()}-${m.getMonth() + 1}`, fmtMonthYear.format(m)]);
   }
-  const later = upcoming.filter((s) => s.date > windowEnd).length;
+  const later = upcoming.filter((s) => !s.hidden && s.date > windowEnd).length;
   if (later) when.push(['later', `After ${fmtMon.format(windowEnd)} ${windowEnd.getDate()} (${later})`]);
   fillSelect(ui.when, when, state.when);
 
-  const genres = [...new Set(upcoming.flatMap((s) => s.genres))].sort((a, b) => a.localeCompare(b));
+  const genres = [...new Set(upcoming.filter((s) => !s.hidden).flatMap((s) => s.genres))].sort((a, b) => a.localeCompare(b));
   fillSelect(ui.genre, [[ALL, 'All genres'], ...genres.map((g) => [g, g])], ALL);
 }
 
