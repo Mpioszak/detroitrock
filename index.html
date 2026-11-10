@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Detroit Rock — Michigan rock shows on a map</title>
+  <meta name="description" content="A map of rock venues across Metro Detroit and the rest of Michigan, with every rock and rock-adjacent show booked for the next six months.">
+  <meta name="theme-color" content="#0c0c0e">
+  <meta property="og:title" content="Detroit Rock — Michigan rock shows on a map">
+  <meta property="og:description" content="Rock, metal, punk and indie shows across Metro Detroit and Michigan for the next six months.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0c0e'/%3E%3Cpath d='M18.5 3 7 18h7l-1.5 11L25 13h-7.5z' fill='%23ff4d2e'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.min.css" integrity="sha384-uIZNAcoEHVWMk8LrCSX95DJk6FQzH6zG00LQC9BykRY1UKKpkDzDhbDLYQ1Ho3mI" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="app" id="app" data-view="split">
+
+    <header class="top">
+      <div class="masthead">
+        <a class="brand" href="./" aria-label="Detroit Rock, home">
+          <svg class="brand__bolt" viewBox="0 0 32 32" aria-hidden="true"><path d="M18.5 2 6 18h8l-2 12L26 13h-8z"/></svg>
+          <span class="brand__name">Detroit Rock</span>
+        </a>
+        <p class="tagline">Michigan rock shows, next six months</p>
+        <div class="viewswitch" role="group" aria-label="Layout">
+          <button type="button" data-view="split" aria-pressed="true">Both</button>
+          <button type="button" data-view="map" aria-pressed="false">Map</button>
+          <button type="button" data-view="list" aria-pressed="false">List</button>
+        </div>
+      </div>
+
+      <form class="filters" id="filters" role="search" autocomplete="off">
+        <div class="filters__search">
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="m13 13 4.5 4.5"/></svg>
+          <input type="search" id="q" placeholder="Search bands, venues, cities" aria-label="Search bands, venues or cities" enterkeyhint="search">
+        </div>
+        <div class="filters__selects">
+          <select id="region" aria-label="Area"></select>
+          <select id="when" aria-label="When"></select>
+          <select id="genre" aria-label="Genre"></select>
+        </div>
+      </form>
+    </header>
+
+    <main class="mapwrap">
+      <div id="map" role="region" aria-label="Map of Michigan rock venues"></div>
+      <button type="button" class="mapbtn" id="resetView" title="Back to the selected area">Reset view</button>
+      <p class="maphint" id="mapHint">Numbers are upcoming shows. Tap one to see them.</p>
+    </main>
+
+    <section class="results" aria-label="Upcoming shows">
+      <div class="summary">
+        <p class="summary__count" id="count" role="status">Loading shows…</p>
+        <button type="button" class="linkbtn" id="clear" hidden>Clear filters</button>
+      </div>
+      <div class="venuechip" id="venueChip" hidden>
+        <div class="venuechip__text">
+          <strong id="venueChipName"></strong>
+          <span id="venueChipMeta"></span>
+        </div>
+        <button type="button" class="venuechip__close" id="venueChipClose" aria-label="Show all venues again">✕</button>
+      </div>
+      <div class="results__scroll" id="scroll" tabindex="-1">
+        <ol class="shows" id="shows"></ol>
+        <footer class="foot" id="foot"></footer>
+      </div>
+    </section>
+
+  </div>
+
+  <noscript><p class="noscript">This map needs JavaScript turned on.</p></noscript>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js" integrity="sha384-NElt3Op+9NBMCYaef5HxeJmU4Xeard/Lku8ek6hoPTvYkQPh3zLIrJP7KiRocsxO" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js" integrity="sha384-SIh+qcEBNMda8tT+rx66aCBuWtVYMVzRABqhK4eeQh4pjDHoRdVx8nYU4LQ5eGzI" crossorigin="anonymous"></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

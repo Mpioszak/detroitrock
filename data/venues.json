@@ -1,0 +1,370 @@
+{
+  "venues": [
+    {
+      "id": "saint-andrews-hall",
+      "name": "Saint Andrew's Hall",
+      "address": "431 E Congress St",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33235,
+      "lng": -83.0416,
+      "website": "https://www.saintandrewsdetroit.com/shows",
+      "note": "The Shelter is the downstairs room."
+    },
+    {
+      "id": "fillmore-detroit",
+      "name": "The Fillmore Detroit",
+      "address": "2115 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33783,
+      "lng": -83.05177,
+      "website": "https://www.thefillmoredetroit.com/shows"
+    },
+    {
+      "id": "fox-theatre",
+      "name": "Fox Theatre",
+      "address": "2211 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33858,
+      "lng": -83.05225,
+      "website": "https://www.313presents.com/venue/fox-theatre"
+    },
+    {
+      "id": "little-caesars-arena",
+      "name": "Little Caesars Arena",
+      "address": "2645 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.34098,
+      "lng": -83.05495,
+      "website": "https://www.313presents.com/venue/little-caesars-arena"
+    },
+    {
+      "id": "fifth-third-park",
+      "name": "Fifth Third Park",
+      "address": "2100 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33922,
+      "lng": -83.04886,
+      "website": "https://www.313presents.com/venue/fifth-third-park",
+      "note": "Formerly Comerica Park."
+    },
+    {
+      "id": "sound-board",
+      "name": "Sound Board at MotorCity Casino Hotel",
+      "address": "2901 Grand River Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33824,
+      "lng": -83.06697,
+      "website": "https://www.313presents.com/events"
+    },
+    {
+      "id": "masonic-temple",
+      "name": "Masonic Temple",
+      "address": "500 Temple St",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.34175,
+      "lng": -83.0601,
+      "website": "https://www.themasonic.com/calendar"
+    },
+    {
+      "id": "majestic-theatre",
+      "name": "The Majestic Theatre",
+      "address": "4140 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.35146,
+      "lng": -83.06012,
+      "website": "https://www.majesticdetroit.com/events/"
+    },
+    {
+      "id": "magic-stick",
+      "name": "Magic Stick",
+      "address": "4120 Woodward Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.35102,
+      "lng": -83.05997,
+      "website": "https://www.majesticdetroit.com/events/"
+    },
+    {
+      "id": "el-club",
+      "name": "El Club",
+      "address": "4114 W Vernor Hwy",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.32133,
+      "lng": -83.0934,
+      "website": "https://elclubdetroit.com/shows/"
+    },
+    {
+      "id": "lager-house",
+      "name": "Lager House",
+      "address": "1254 Michigan Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.33165,
+      "lng": -83.06331,
+      "website": "https://www.thelagerhouse.com/events"
+    },
+    {
+      "id": "russell-industrial-center",
+      "name": "Russell Industrial Center",
+      "address": "1600 Clay St",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.37884,
+      "lng": -83.06111,
+      "website": "https://thecrofoot.com/events/",
+      "note": "Concerts here are booked by Crofoot Presents."
+    },
+    {
+      "id": "harpos",
+      "name": "Harpos Concert Theatre",
+      "address": "14238 Harper Ave",
+      "city": "Detroit",
+      "region": "Metro Detroit",
+      "lat": 42.40387,
+      "lng": -82.96638,
+      "website": "https://www.harposlive.com/"
+    },
+    {
+      "id": "smalls",
+      "name": "Small's",
+      "address": "10339 Conant St",
+      "city": "Hamtramck",
+      "region": "Metro Detroit",
+      "lat": 42.40218,
+      "lng": -83.05291,
+      "website": "https://www.smallsbardetroit.com/"
+    },
+    {
+      "id": "sanctuary-detroit",
+      "name": "The Sanctuary Detroit",
+      "address": "2932 Caniff St",
+      "city": "Hamtramck",
+      "region": "Metro Detroit",
+      "lat": 42.39986,
+      "lng": -83.05897
+    },
+    {
+      "id": "magic-bag",
+      "name": "The Magic Bag",
+      "address": "22920 Woodward Ave",
+      "city": "Ferndale",
+      "region": "Metro Detroit",
+      "lat": 42.46184,
+      "lng": -83.13476,
+      "website": "https://www.themagicbag.com/magicbag-concerts-calendar"
+    },
+    {
+      "id": "loving-touch",
+      "name": "The Loving Touch",
+      "address": "22634 Woodward Ave",
+      "city": "Ferndale",
+      "region": "Metro Detroit",
+      "lat": 42.45949,
+      "lng": -83.1342,
+      "website": "https://thelovingtouchferndale.com/events"
+    },
+    {
+      "id": "royal-oak-music-theatre",
+      "name": "Royal Oak Music Theatre",
+      "address": "318 W 4th St",
+      "city": "Royal Oak",
+      "region": "Metro Detroit",
+      "lat": 42.4873,
+      "lng": -83.14691,
+      "website": "https://www.royaloakmusictheatre.com/events"
+    },
+    {
+      "id": "crofoot",
+      "name": "The Crofoot",
+      "address": "1 S Saginaw St",
+      "city": "Pontiac",
+      "region": "Metro Detroit",
+      "lat": 42.63659,
+      "lng": -83.2916,
+      "website": "https://thecrofoot.com/events/",
+      "note": "Two rooms: the Crofoot Ballroom and the Pike Room."
+    },
+    {
+      "id": "pine-knob",
+      "name": "Pine Knob Music Theatre",
+      "address": "33 Bob Seger Dr",
+      "city": "Clarkston",
+      "region": "Metro Detroit",
+      "lat": 42.74507,
+      "lng": -83.37232,
+      "website": "https://www.313presents.com/venue/pine-knob-music-theatre"
+    },
+    {
+      "id": "meadow-brook",
+      "name": "Meadow Brook Amphitheatre",
+      "address": "3554 Walton Blvd",
+      "city": "Rochester Hills",
+      "region": "Metro Detroit",
+      "lat": 42.67627,
+      "lng": -83.20299,
+      "website": "https://www.313presents.com/events",
+      "note": "Outdoor summer venue."
+    },
+    {
+      "id": "michigan-lottery-amphitheatre",
+      "name": "Michigan Lottery Amphitheatre at Freedom Hill",
+      "address": "14900 Metropolitan Pkwy",
+      "city": "Sterling Heights",
+      "region": "Metro Detroit",
+      "lat": 42.56415,
+      "lng": -82.97616,
+      "website": "https://www.313presents.com/venue/michigan-lottery-amphitheatre",
+      "note": "Outdoor summer venue."
+    },
+    {
+      "id": "diesel",
+      "name": "Diesel Concert Lounge",
+      "address": "33151 23 Mile Rd",
+      "city": "Chesterfield",
+      "region": "Metro Detroit",
+      "lat": 42.67555,
+      "lng": -82.77636,
+      "website": "https://www.dieselconcerts.com/"
+    },
+    {
+      "id": "token-lounge",
+      "name": "The Token Lounge",
+      "address": "28949 Joy Rd",
+      "city": "Westland",
+      "region": "Metro Detroit",
+      "lat": 42.35477,
+      "lng": -83.32708,
+      "website": "https://www.tokenlounge.com/"
+    },
+    {
+      "id": "district-142",
+      "name": "District 142",
+      "address": "142 Maple St",
+      "city": "Wyandotte",
+      "region": "Metro Detroit",
+      "lat": 42.20234,
+      "lng": -83.15096,
+      "website": "https://district142live.com/events/"
+    },
+    {
+      "id": "blind-pig",
+      "name": "The Blind Pig",
+      "address": "208 S First St",
+      "city": "Ann Arbor",
+      "region": "Ann Arbor",
+      "lat": 42.28038,
+      "lng": -83.75111,
+      "website": "https://blindpigmusic.com/calendar/"
+    },
+    {
+      "id": "machine-shop",
+      "name": "The Machine Shop",
+      "address": "3539 S Dort Hwy",
+      "city": "Flint",
+      "region": "Flint & Saginaw",
+      "lat": 42.99149,
+      "lng": -83.65292,
+      "website": "https://themachineshop.info/"
+    },
+    {
+      "id": "dow-event-center",
+      "name": "Dow Event Center",
+      "address": "303 Johnson St",
+      "city": "Saginaw",
+      "region": "Flint & Saginaw",
+      "lat": 43.43602,
+      "lng": -83.93694,
+      "website": "https://www.doweventcenter.com/events"
+    },
+    {
+      "id": "grewal-hall",
+      "name": "Grewal Hall at 224",
+      "address": "224 S Washington Square",
+      "city": "Lansing",
+      "region": "Lansing & Mid-Michigan",
+      "lat": 42.73158,
+      "lng": -84.55254,
+      "website": "https://grewalhall.com/"
+    },
+    {
+      "id": "soaring-eagle",
+      "name": "Soaring Eagle Casino & Resort",
+      "address": "6800 Soaring Eagle Blvd",
+      "city": "Mount Pleasant",
+      "region": "Lansing & Mid-Michigan",
+      "lat": 43.6084,
+      "lng": -84.71299,
+      "website": "https://soaringeaglecasino.com/shows-events/shows/"
+    },
+    {
+      "id": "glc-live-20-monroe",
+      "name": "GLC Live at 20 Monroe",
+      "address": "11 Ottawa Ave NW",
+      "city": "Grand Rapids",
+      "region": "Grand Rapids",
+      "lat": 42.96377,
+      "lng": -85.67179,
+      "website": "https://www.glcliveat20monroe.com/shows"
+    },
+    {
+      "id": "intersection",
+      "name": "The Intersection",
+      "address": "133 Cesar E. Chavez Ave SW",
+      "city": "Grand Rapids",
+      "region": "Grand Rapids",
+      "lat": 42.95989,
+      "lng": -85.67407,
+      "website": "https://sectionlive.com/events/",
+      "note": "Four rooms: The Intersection, Elevation, The Stache and The Mint."
+    },
+    {
+      "id": "pyramid-scheme",
+      "name": "The Pyramid Scheme",
+      "address": "68 Commerce Ave SW",
+      "city": "Grand Rapids",
+      "region": "Grand Rapids",
+      "lat": 42.96157,
+      "lng": -85.66902,
+      "website": "https://pyramidschemebar.com/grand-rapids-live-music-and-comedy/"
+    },
+    {
+      "id": "van-andel-arena",
+      "name": "Van Andel Arena",
+      "address": "130 W Fulton St",
+      "city": "Grand Rapids",
+      "region": "Grand Rapids",
+      "lat": 42.96224,
+      "lng": -85.67159,
+      "website": "https://www.vanandelarena.com/events"
+    },
+    {
+      "id": "bells-eccentric-cafe",
+      "name": "Bell's Eccentric Cafe",
+      "address": "355 E Kalamazoo Ave",
+      "city": "Kalamazoo",
+      "region": "Kalamazoo & Battle Creek",
+      "lat": 42.29495,
+      "lng": -85.5787,
+      "website": "https://events.bellsbeer.com/events/"
+    },
+    {
+      "id": "firekeepers",
+      "name": "FireKeepers Casino Hotel",
+      "address": "11177 E Michigan Ave",
+      "city": "Battle Creek",
+      "region": "Kalamazoo & Battle Creek",
+      "lat": 42.29554,
+      "lng": -85.07761,
+      "website": "https://firekeeperscasino.com/shows/"
+    }
+  ]
+}
